@@ -1,0 +1,20 @@
+<table style="width: 100%;">
+  <tr>
+    <th>Id</th>
+    <th>Naziv</th>
+    <th>Opis</th>
+    <th>Cena</th>
+    <th>Detalji</th>
+    <th>Obrisi</th>
+  </tr>
+  <tr *ngFor="let namestaj of namestaji">
+    <td>{{ namestaj.id }}</td>
+    <td>{{ namestaj.naziv }}</td>
+    <td>{{ namestaj.opis }}</td>
+    <td>{{ namestaj.cena }}</td>
+    <td><a [routerLink]="['/namestaj', namestaj.id]">Detalji</a></td>
+    <td><a class="obrisi" (click)="obrisi(namestaj.id)">Obrisi</a></td>
+  </tr>
+</table>
+
+<app-namestaj-dodaj (onSubmit)="dodajNamestaj($event)"></app-namestaj-dodaj>

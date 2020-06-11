@@ -1,0 +1,19 @@
+<div>
+  <select name="izabranNamestajId" [(ngModel)]="izabranNamestajId">
+    <option *ngFor="let namestaj of namestaji" value="{{ namestaj.id }}">{{
+      namestaj.naziv
+    }}</option>
+  </select>
+  <select name="izabranDeoId" [(ngModel)]="izabranDeoId">
+    <option *ngFor="let deo of delovi" value="{{ deo.id }}">{{
+      deo.naziv
+    }}</option>
+  </select>
+  <input
+    type="text"
+    name="komada"
+    [(ngModel)]="noviDeoNamestaja.komada"
+    placeholder="komada"
+  />
+  <button (click)="prosledi()">Dodaj deo</button>
+</div>

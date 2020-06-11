@@ -1,0 +1,18 @@
+<table style="width: 100%;">
+  <tr>
+    <th>Id</th>
+    <th>Naziv</th>
+    <th>Dimenzije</th>
+    <th>Detalji</th>
+    <th>Obrisi</th>
+  </tr>
+  <tr *ngFor="let deo of delovi">
+    <td>{{ deo.id }}</td>
+    <td>{{ deo.naziv }}</td>
+    <td>{{ deo.dimenzije }}</td>
+    <td><a [routerLink]="['/deo', deo.id]">Detalji</a></td>
+    <td><a class="obrisi" (click)="obrisi(deo.id)">Obrisi</a></td>
+  </tr>
+</table>
+
+<app-deo-dodaj (onSubmit)="dodajDeo($event)"></app-deo-dodaj>

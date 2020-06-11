@@ -1,0 +1,21 @@
+<div>
+  <input
+    type="text"
+    name="naziv"
+    [(ngModel)]="noviNamestaj.naziv"
+    placeholder="naziv"
+  />
+  <input
+    type="text"
+    name="opis"
+    [(ngModel)]="noviNamestaj.opis"
+    placeholder="opis"
+  />
+  <input
+    type="text"
+    name="cena"
+    [(ngModel)]="noviNamestaj.cena"
+    placeholder="cena"
+  />
+  <button (click)="prosledi()">Dodaj namestaj</button>
+</div>

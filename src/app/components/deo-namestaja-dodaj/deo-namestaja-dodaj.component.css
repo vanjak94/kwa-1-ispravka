@@ -1,0 +1,15 @@
+div {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+input {
+  margin-top: 10px;
+}
+button {
+  margin-top: 10px;
+}
+select {
+  margin-top: 10px;
+}

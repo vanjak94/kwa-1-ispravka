@@ -1,0 +1,17 @@
+<div>
+  <input
+    type="text"
+    name="naziv"
+    [(ngModel)]="deo.naziv"
+    placeholder="naziv"
+    value="{{ deo.naziv }}"
+  />
+  <input
+    type="text"
+    name="dimenzije"
+    [(ngModel)]="deo.dimenzije"
+    placeholder="dimenzije"
+    value="{{ deo.dimenzije }}"
+  />
+  <button (click)="izmeni()">Izmeni deo</button>
+</div>
